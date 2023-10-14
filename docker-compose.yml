@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+
+  sender:
+    container_name: sender-dev
+    depends_on: [rabbitmq]
+    build:
+      context: .
+      target: sender-dev
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app
+  consumer:
+    container_name: consumer-dev
+    depends_on: [rabbitmq]
+    build:
+      context: .
+      target: consumer-dev
+    ports:
+      - 3001:3001
+    volumes:
+      - .:/usr/src/app
+
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    ports:
+        - 5672:5672
+        - 15672:15672
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq

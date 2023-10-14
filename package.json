@@ -9,7 +9,9 @@
     "apps/**"
   ],
   "scripts": {
-    "build": "turbo build"
+    "build": "turbo build",
+    "sender": "yarn workspace sender dev",
+    "consumer": "yarn workspace consumer dev"
   },
   "dependencies": {
     "turbo": "^1.10.15"
