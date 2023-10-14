@@ -1,0 +1,9 @@
+{
+  "name": "microservices-rabbitmq",
+  "version": "1.0.0",
+  "description": "An example microservices monorepo using rabbitmq for internal asynchronous comunication",
+  "repository": "git@github.com:leivaa21/Microservices-RabbitMQ.git",
+  "author": "Leivaa <adrianleiva212@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
