@@ -1,0 +1,26 @@
+## [ NODE ] ##
+**/node_modules
+
+## [ YARN ] ##
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+## [ Builds ] ##
+**/dist
+
+## [ Enviromentals ] ##
+**/*.env
+
+## [ Docker Volumes ] ##
+.volumes
+
+## [ JEST ] ##
+**/coverage
+
+## [ TURBO ] ##
+**/.turbo
